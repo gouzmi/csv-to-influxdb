@@ -89,7 +89,7 @@ def loadCsv(inputfilename, dbname, measurement, tagcolumns=None, fieldcolumns=No
                 datetime_local = datetime_naive
 
             timestamp = unix_time_millis(
-                datetime_local)  # second
+                datetime_local) * 1000000
 
             tags = {}
             if tagcolumns != None:
